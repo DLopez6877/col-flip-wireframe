@@ -2,50 +2,217 @@
 *:not(body):not(html) {
   box-sizing:border-box;
   border:1px dashed #000;
+  background-color: white;
+  opacity: .7;
 }
 
 .column {
   min-height: 100px;
 }
 
+.cf::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 /*/////////////////////          GENERAL          /////////////////////*/
 body {
   margin: 0;
+  background-color: lightblue;
+  font-size: 3vmax;
 }
 
 .container {
-  margin: 10px;
-  border-width: medium;
-  padding: 5%;
-  min-height: calc(100vh - 20px);
+  margin: 5%;
 }
 
-/*/////////////////////          GENERAL          /////////////////////*/
-.col1 {
-
+/*/////////////////////          HEADER          /////////////////////*/
+.header {
+  background-color: rgba(200, 200, 200, 0.2);
 }
 
+.icon {
+  width: 50px;
+  min-height: 50px;
+  border-radius: 50%;
+  float: left;
+}
+
+.logo {
+  width: 20%;
+  min-height: 50px;
+  float: left;
+}
+
+.ol {
+  width: 90%;
+  background-color: rgba(200, 200, 200, 0.2);
+  font-size: 0;
+  margin: 5% 0;
+}
+
+.li {
+  width: 20%;
+  margin-right: 5%;
+  min-height: 5vh;
+  display: inline-block;
+}
+
+/*/////////////////////          FEATURE          /////////////////////*/
+.feature-circle {
+  border-radius: 50%;
+  width: 40vmin;
+  min-height: 40vmin;
+  margin-left: 22.5vmin;
+}
+
+/*/////////////////////          GALLERY          /////////////////////*/
+.gal-img {
+  margin: 5% 0;
+}
+
+/*/////////////////////          CONTENT          /////////////////////*/
+.info-item {
+  margin: 5% 0;
+}
+
+.details-item {
+  margin: 5% 0;
+}
+
+.details-item-img {
+  float: left;
+  width: 25%;
+}
+
+.details-item-p {
+  float: right;
+  width: 70%;
+}
 /*/////////////////////          @MEDIA          /////////////////////*/
 
 /* Smartphones (landscape) ----------- */
-@media only screen and (min-width : 321px) {
+@media only screen and (min-width : 321px) and (orientation : landscape) {
 /* Styles */
   body{
     background-color: blue;
   }
+  .logo-area {
+    float: left;
+    width: 30%;
+  }
+  .ol {
+    float:right;
+    width: 70%;
+    margin: 0;
+  }
+  .logo {
+    width: 70%
+  }
+  .header {
+    min-height: 0;
+  }
+  .feature-p {
+    float: left;
+    width: 50%;
+  }
+  .feature-circle {
+    float: right;
+    margin: 0;
+    margin-right: 5%;
+  }
+  .gal-img {
+    width: 30%;
+    float: left;
+  }
+  .gal-img:nth-child(2) {
+    width: 30%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .info {
+    float: left;
+    width: 50%;
+  }
+  .details {
+    width: 50%;
+    float: right
+  }
 }
 
 /* Smartphones (portrait) ----------- */
-@media only screen and (max-width : 320px) {
+@media only screen and (max-width : 320px) and (orientation : portrait) {
   body{
     background-color: red;
+  }
+  .logo-area {
+    float: left;
+    width: 30%;
+  }
+  .ol {
+    float:right;
+    width: 70%;
+    margin: 0;
+  }
+  .logo {
+    width: 70%
+  }
+  .header {
+    min-height: 0;
+  }
+  .feature-p {
+    float: left;
+    width: 50%;
+  }
+  .feature-circle {
+    float: right;
+    margin: 0;
+    /*margin-right: 5%;*/
+  }
+  .gal-img {
+    width: 30%;
+    float: left;
+  }
+  .gal-img:nth-child(2) {
+    width: 30%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .info {
+    float: left;
+    width: 50%;
+  }
+  .details {
+    width: 50%;
+    float: right
   }
 }
 
 /* Smartphones Large (landscape) */
 @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape){
   body{
-    background-color: green;
+    background-color: yellow;
+  }
+  .gallery {
+    float: left;
+    width: 30%
+  }
+  .gal-img {
+    width: 100%;
+  }
+  .gal-img:nth-child(2) {
+    width: 100%;
+    margin: 0;
+  }
+  .info {
+    float: left;
+    width: 30%;
+    margin: 0 5%;
+  }
+  .details {
+    float: left;
+    width: 30%;
   }
 }
 
@@ -54,12 +221,73 @@ body {
   body{
     background-color: orange;
   }
+  .logo-area {
+    float: left;
+    width: 30%;
+  }
+  .ol {
+    float:right;
+    width: 70%;
+    margin: 0;
+  }
+  .logo {
+    width: 70%
+  }
+  .header {
+    min-height: 0;
+  }
+  .feature-p {
+    float: left;
+    width: 50%;
+  }
+  .feature-circle {
+    float: right;
+    margin: 0;
+    margin-right: 5%;
+  }
+  .gal-img {
+    width: 30%;
+    float: left;
+  }
+  .gal-img:nth-child(2) {
+    width: 30%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .info {
+    float: left;
+    width: 50%;
+  }
+  .details {
+    width: 50%;
+    float: right
+  }
 }
 
 /* iPads (landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
   body{
     background-color: pink;
+  }
+  .gallery {
+    float: left;
+    width: 30%
+  }
+  .gal-img {
+    width: 100%;
+  }
+  .gal-img:nth-child(2) {
+    width: 100%;
+    margin: 0;
+  }
+  .info {
+    float: left;
+    width: 30%;
+    margin: 0 5%;
+  }
+  .details {
+    float: left;
+    width: 30%;
   }
 }
 
@@ -68,12 +296,46 @@ body {
   body{
     background-color: purple;
   }
-}
-
-/* Desktops and laptops ----------- */
-@media only screen  and (min-width : 1224px) {
-  body{
-    background-color: yellow;
+  .logo-area {
+    float: left;
+    width: 30%;
+  }
+  .ol {
+    float:right;
+    width: 70%;
+    margin: 0;
+  }
+  .logo {
+    width: 70%
+  }
+  .header {
+    min-height: 0;
+  }
+  .feature-p {
+    float: left;
+    width: 50%;
+  }
+  .feature-circle {
+    float: right;
+    margin: 0;
+    margin-right: 5%;
+  }
+  .gal-img {
+    width: 30%;
+    float: left;
+  }
+  .gal-img:nth-child(2) {
+    width: 30%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .info {
+    float: left;
+    width: 50%;
+  }
+  .details {
+    width: 50%;
+    float: right
   }
 }
 
@@ -81,5 +343,28 @@ body {
 @media only screen  and (min-width : 1824px) {
   body{
     background-color: green;
+  }
+  .gallery {
+    float: left;
+    width: 30%
+  }
+  .gal-img {
+    width: 100%;
+  }
+  .gal-img:nth-child(2) {
+    width: 100%;
+    margin: 0;
+  }
+  .info {
+    float: left;
+    width: 30%;
+    margin: 0 5%;
+  }
+  .details {
+    float: left;
+    width: 30%;
+  }
+  .feature-circle {
+    margin-right: 15%;
   }
 }
